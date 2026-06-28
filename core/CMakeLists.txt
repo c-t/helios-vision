@@ -1,7 +1,3 @@
-cmake_minimum_required(VERSION 3.20)
-
-project(helios_core)
-
 add_library(
 	helios_core
 	src/engine.cpp
@@ -10,13 +6,7 @@ add_library(
 target_include_directories(
 	helios_core
 	PUBLIC
-	include
-)
-
-target_compile_features(
-	helios_core
-	PUBLIC
-	cxx_std_20
+	${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
 add_executable(
